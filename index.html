@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+</head>
+<body>
+    <h1>BACKGROUND COLOR CHANGER</h1>
+    <button id="btn">Change background</button>
+    <h3>Difficulty: Easy</h3>
+</body>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: red;
+        min-height: 100vh;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        transition: background-color 1.2s ease-in-out;
+    }
+
+    h1 {
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    #btn {
+        margin: 20px 0;
+        padding: 10px;
+        border: none;
+        border-radius: 2rem;
+        background-color: black;
+        color: white;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .change {
+        background-color: blue;
+    }
+</style>
+
+<script>
+    const body = document.querySelector('body');
+    const button = document.getElementById('btn');
+
+    const colors = ['blue', 'red'];
+
+    button.addEventListener('click', () =>{
+        body.classList.toggle('change');
+        console.log(body.style);
+    })
+</script>
+</html>
