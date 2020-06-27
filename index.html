@@ -6,7 +6,7 @@
     <title>Background Color Changer</title>
 </head>
 <body>
-    <h1>BACKGROUND COLOR CHANGER</h1>
+    <h2>BACKGROUND COLOR CHANGER</h2>
     <button id="btn">Change background</button>
     <h3>Difficulty: Easy</h3>
 </body>
@@ -20,17 +20,16 @@
 
     body {
         background-color: red;
-        min-height: 100vh;
-        max-width: 500px;
+        height: 100vh;
+        width: 100vw;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 0 auto;
         transition: background-color 1.2s ease-in-out;
     }
 
-    h1 {
+    h2 {
         text-align: center;
         font-weight: bolder;
     }
@@ -49,17 +48,18 @@
     .change {
         background-color: blue;
     }
+
+    @media only screen and (max-width: 765px) {
+        
+    }
 </style>
 
 <script>
     const body = document.querySelector('body');
     const button = document.getElementById('btn');
 
-    const colors = ['blue', 'red'];
-
     button.addEventListener('click', () =>{
         body.classList.toggle('change');
-        console.log(body.style);
     })
 </script>
 </html>
